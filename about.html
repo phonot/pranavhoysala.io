@@ -48,17 +48,17 @@ var audioControl = document.getElementById("audioControl");
 function playPause() {
   if (myAudio.paused) {
     myAudio.play();
-    audioControl.innerHTML = "Music mode";
+    audioControl.innerHTML = "Music disable";
   } else {
     myAudio.pause();
-    audioControl.innerHTML = "No music";
+    audioControl.innerHTML = "Music mode";
   }
 }
 </script>
 <hr width="65%" />
 <div style="width: 65%; margin: 0 auto; overflow: hidden;">
-    <marquee behavior="scroll" direction="left" scrollamount="10" style="width: 100%; white-space: nowrap;"  loop="1">
-       Send me your feedback
+    <marquee behavior="scroll" direction="left" scrollamount="8" style="width: 100%; white-space: nowrap;"  loop="1">
+       The above text plays backround Music
     </marquee>
 </div>
 
