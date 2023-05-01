@@ -34,27 +34,45 @@
 <br>
 <br>
 
-<audio id="myAudio">
-  <source src="test.mp3" type="audio/mpeg">
-</audio>
+<head>
+	<title>Toggle Dark/Light Mode</title>
+	<style>
+		body {
+			background-color: white;
+			color: black;
+			transition: all 0.5s ease;
+		}
+		
+		body.dark {
+			background-color: black;
+			color: white;
+		}
+		
+		.toggle {
+			cursor: pointer;
+			color: blue;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<p>This is some text on the page.</p>
+	<p>Click on the text below to toggle between dark mode and light mode:</p>
+	<p class="toggle">Toggle Dark/Light Mode</p>
 
+	<script>
+		const toggleBtn = document.querySelector('.toggle');
 
-<p id="audioControl" onclick="playPause()">Music mode</p>
+		toggleBtn.addEventListener('click', function() {
+			document.body.classList.toggle('dark');
+		});
+	</script>
+</body>
+    
+   <audio id="music" src="test.mp3" loop></audio>
+<p id="music-control" onclick="toggleMusic()">Play Music</p>
 
-<script>
-var myAudio = document.getElementById("myAudio");
-var audioControl = document.getElementById("audioControl");
-
-function playPause() {
-  if (myAudio.paused) {
-    myAudio.play();
-    audioControl.innerHTML = "Music disable";
-  } else {
-    myAudio.pause();
-    audioControl.innerHTML = "Music mode";
-  }
-}
-</script>
+    
 <hr width="65%" />
 <div style="width: 65%; margin: 0 auto; overflow: hidden;">
     <marquee behavior="scroll" direction="left" scrollamount="8" style="width: 100%; white-space: nowrap;"  loop="1">
