@@ -63,10 +63,24 @@
 </body>
 </html>
 
-    
-<audio id="myAudio" src="test.mp3" preload="auto" loop autoplay></audio>
-<button id="Music Mode">Pause</button>
+<audio id="myAudio" src="test.mp3" preload="auto"></audio>
 
+<button onclick="togglePlay()" id="playButton">Play</button>
+
+<script>
+  var audio = document.getElementById("myAudio");
+  var playButton = document.getElementById("playButton");
+
+  function togglePlay() {
+    if (audio.paused) {
+      audio.play();
+      playButton.innerHTML = "Pause";
+    } else {
+      audio.pause();
+      playButton.innerHTML = "Play";
+    }
+  }
+</script>
     
 <hr width="65%" />
 <div style="width: 65%; margin: 0 auto; overflow: hidden;">
