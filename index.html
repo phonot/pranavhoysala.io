@@ -10,7 +10,7 @@
 <hr width="65%" />
 <h4 align="center"> </h4>
 <div style="text-align: center;">
-  <div style="display: table; margin: auto ; padding: 0px; background-color: white;">
+  <div style="display: table; margin: auto ; padding: 0px; background-color: auto;">
     <p style="margin: auto;">My name is  pranav hoysala.<br> I am a 18 year old guy from india. I am completeing my studies in Bio Medical Engineering. <br> <br> <br> <br> I like computers, I use linux myself, I coded this website myself. I like to keep things simple like this website <br> I like to create things myself.<br> (<i> If you don't like the looks, click on Cooler website below <i>)</p> 
       </div
 </div>
@@ -63,6 +63,31 @@
   <body onload="getQuote()">
     <p id="quote"></p>
 <hr width="65%" />
+    <head>
+	<title>Dark Mode On/Off Button</title>
+	<style>
+		body {
+			background-color: #fff;
+			color: #333;
+			transition: background-color 0.5s ease;
+		}
+		
+		.dark-mode {
+			background-color: #000;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="toggleDarkMode()"> Change Theme</button>
+	
+	<script>
+		function toggleDarkMode() {
+			var body = document.body;
+			body.classList.toggle("dark-mode");
+		}
+	</script>
+</body>
 <footer>
   <div style="text-align: center;">
     <a href="index">Home</a> | 
